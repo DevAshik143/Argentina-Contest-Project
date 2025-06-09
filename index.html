@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YesYouCan Consulting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0px;
+      padding: 0;
+      background: #fff;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+ 
+      border-bottom: 1px solid #ccc;
+      max-width: 1240px;
+      margin: auto;
+    }
+
+    .logo img {
+      height: 120px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      font-size: 1.2em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav a.active {
+      font-weight: bold;
+    }
+
+    .main-quote {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 40px 0 20px;
+    }
+
+    .hero-section {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+    }
+
+    .image-container .text {
+      position: absolute;
+      right: 30px;
+      bottom: 170px;
+      color: black;
+      font-weight: bold;
+      font-size: 1.4em;
+      text-align: right;
+      line-height: 1.4;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+    .contact-btn {
+  display: inline-block;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #3d4b66;
+  text-decoration: none;
+  border-bottom: 3px solid #3d4b66;
+  padding-bottom: 5px;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  color: #1d2a44;
+  border-color: #1d2a44;
+}
+
+
+.about-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.about-section h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.founder-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.founder-photo img {
+  width: 260px;
+  border-radius: 4px;
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.founder-text h3 {
+  margin-top: 0;
+}
+
+.founder-text p {
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+
+
+.container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .left-section {
+      width: 50%;
+    }
+
+    .left-section p {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .left-section .map-placeholder {
+      margin: 60px 0;
+      font-size: 20px;
+    }
+
+    .contact-info {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .right-section {
+      width: 45%;
+      background-color: #f5f5f5;
+      padding: 25px;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+
+    .right-section h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+
+    .services-section {
+      max-width: 800px;
+    }
+
+    .services-section h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .service-item {
+      margin-bottom: 30px;
+    }
+
+    .service-item-title {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .service-item p {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .service-item a {
+      text-decoration: underline;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .service-item a:hover {
+      color: #0073e6;
+    }
+
+        .metodo-section {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      max-width: 900px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .metodo-section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .metodo-section ul ul {
+      list-style-type: circle;
+      margin-left: 25px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .metodo-section ul ul ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .metodo-section li {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .metodo-section .bold {
+      font-weight: 700;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .metodo-section .underline {
+      text-decoration: underline;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar with Logo and Navigation -->
+  <div class="top-bar">
+    <div class="logo">
+      <img src="assets/01.jpg" alt="YesYouCan Logo" />
+    </div>
+    <nav>
+      <a href="#section-01" class="active">Home</a>
+      <a href="#section-02">Nosotros</a>
+      <a href="#section-03">Servicios</a>
+      <a href="#section-04">Método</a>
+      <a href="#section-05">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- Main Quote Below Top Bar -->
+  <p id="section-01" class="main-quote">“Ayudamos a emprendedores a crecer”</p>
+
+  <!-- Hero Section with Image -->
+  <div class="hero-section">
+    <div class="image-container">
+      <img src="assets/03.jpg" alt="Gimnasta sobre barra de equilibrio">
+      <div class="text">“Sí puedes.<br>Con estrategia y coraje”</div>
+      <a href="#contacto" class="contact-btn">Contáctanos.</a>
+
+    </div>
+  </div>
+
+  <!-- Section Number 02 -->
+
+  <div id="section-02"  style="margin: 100px;" class="about-section">
+  <h2><u>Sobre Nosotros / Identidad</u></h2>
+  <p>
+    En Yesucan somos una consultora creada por emprendedores que entienden lo que significa liderar un negocio desde cero. Aportamos herramientas estratégicas y acompañamiento humano para ayudarte a ordenar tu empresa, tomar mejores decisiones y liderar con claridad, foco y confianza. Trabajamos tanto el negocio como al emprendedor, porque sabemos que uno impacta directamente en el otro.
+  </p>
+
+  <div class="founder-section">
+    <div class="founder-photo">
+      <img src="assets/02.jpg" alt="Foto del Founder">
+    </div>
+    <div class="founder-text">
+      <h3><strong>Palabras del Founder</strong></h3>
+      <p><em><strong>"Sé lo que es emprender. Yo también estuve ahí.“</strong></em></p>
+      <p>
+        Soy Gustavo Vodeb. Desde joven emprendí en el mundo de la tecnología y lideré una empresa innovadora para el sector jurídico. Me formé como Contador Público, obtuve un MBA, y realizar varios cursos de posgrados en desarrollo de Pymes. Hace un tiempo descubrí una nueva vocación que es ayudar a otros emprendedores a crecer.
+      </p>
+      <p>
+        Hoy acompaño a quienes quieren mejorar sus decisiones, fortalecer su liderazgo y desarrollar su potencial con estrategia y coraje
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Service Section -->
+
+
+    <div id="section-03" style="margin: 100px;" class="services-section">
+    <h2>Servicios:</h2>
+
+    <div class="service-item">
+      <div class="service-item-title">Diagnóstico Yesucan</div>
+      <p>Una o dos sesiones iniciales para evaluar en profundidad tu negocio y tu perfil como emprendedor. Es el punto de partida ideal para trazar un plan. <a href="#">Haz clic aqui</a></p>
+    </div>
+
+    <div class="service-item">
+      <div class="service-item-title">Mentoreo individual</div>
+      <p>Acompañamiento mensual o quincenal, combinando lo estratégico con lo personal. Trabajamos juntos tus desafíos concretos y tus decisiones clave. <a href="#">Haz clic aqui</a></p>
+    </div>
+
+    <div class="service-item">
+      <div class="service-item-title">Intensivo 1 a 1</div>
+      <p>Un proceso profundo y concentrado para transformar tu negocio en 2 semanas o 1 mes. Ideal para momentos de crisis o crecimiento. <a href="#">Haz clic aquí</a></p>
+    </div>
+
+    <div class="service-item">
+      <div class="service-item-title">Talleres / Grupos</div>
+      <p>Un proceso profundo y concentrado para transformar tu negocio en 2 semanas o 1 mes. Ideal para momentos de crisis o crecimiento. <a href="#">Haz clic aquí</a></p>
+    </div>
+  </div>
+
+
+  <!-- Section Number 04 -->
+
+  <section id="section-04" class="metodo-section">
+  <ul>
+    <li><span class="bold underline">Método Yesucan-</span>
+      <ul>
+        <li><span class="bold">3 ejes de trabajo:</span>
+          <ul>
+            <li><span class="bold underline">1. Negocio</span>
+              <ul>
+                <li><span class="bold">Herramientas y decisiones estratégicas</span> para que tu empresa crezca con foco y rentabilidad.</li>
+                <li>Análisis de modelo de negocio, finanzas, estrategia comercial, organización y procesos.</li>
+              </ul>
+            </li>
+            <li><span class="bold underline">2. Emprendedor</span>
+              <ul>
+                <li>Acompañamiento personal para liderar desde un lugar más sólido y auténtico.</li>
+                <li>Claridad mental y emocional, toma de decisiones difíciles, gestión del coraje y la confianza.</li>
+              </ul>
+            </li>
+            <li><span class="bold underline">3. Acción</span>
+              <ul>
+                <li>Aterrizamos todo en un plan concreto y ejecutable.</li>
+                <li>Priorización, estructura, seguimiento y hábitos.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+
+
+<!-- Contact form page -->
+ <div id="section-05" style="margin: 100px;" class="container">
+    <div class="left-section">
+      <p>Escribimos y comencemos este gran desafío para ayudarte a alcanzar tu máximo potencial. Sí, puedes.</p>
+
+      <div class="map-placeholder">
+        (agregar mapa con ubicación de Google)
+      </div>
+
+      <div class="contact-info">
+        <strong>Central Ofiice:</strong><br>
+        Alicia Moreau de justo 1150 P2<br>
+        Puerto Madero-CABA<br>
+        Argentina.<br>
+        TeL. +5411-5217-7537
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h2>Contacto:</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Empresa / Organización">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Teléfono">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="País">
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Dirección de correo electrónico">
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Mensaje"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+</html>
